@@ -1,9 +1,11 @@
+# Falso o verdadero
 pruebaV = True
 pruebaF = False
 print (pruebaF)
 print (pruebaV)
 pruebaV = pruebaF
 print (pruebaV)
+# Datos iniciales 
 edad = 18
 estatura = 1.55 
 peso = 55 

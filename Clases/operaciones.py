@@ -1,5 +1,7 @@
+# Ingresar numeros 
 numeroA = 87
 numeroB = 83
+# Operaciones basicas
 sumar = numeroA + numeroB
 print ("el resultado de la suma es", sumar)
 print (f"la suma dio {sumar} exitosamente ")
