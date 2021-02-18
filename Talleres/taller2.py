@@ -21,34 +21,41 @@ PREGUNTA_MAYOR = "¿El numero A es mayor que el numero B?"
 PREGUNTA_DIFERENTES = "¿Los numeros A y B son diferentes?"
 # Codigo 
 print (MENSAJE_BIENVENIDA)
-numeroA = int and float (input(MENSAJE_NUMEROA))
-print (numeroA)
-numeroB = int and float (input (MENSAJE_NUMEROB))
-print (numeroB)
+numeroA = int (input(MENSAJE_NUMEROA))
+numeroB = int (input (MENSAJE_NUMEROB))
 print (MENSAJE_OPCIONES)
 opciones = int (input (listaOpciones))
-print (opciones)
 suma = numeroA + numeroB
-if (opciones == 1) : print (MENSAJE_SUMA, suma)
 resta2 = numeroA - numeroB
-if (opciones == 2) : print (MENSAJE_RESTA, resta2)
 resta3 = numeroB - numeroA 
-if (opciones == 3) : print (MENSAJE_RESTA, resta3)
 multiplicacion = numeroA * numeroB 
-if (opciones == 4) : print (MENSAJE_MULTIPLICACION, multiplicacion)
 division5 = numeroA / numeroB
-if (opciones == 5) : print (MENSAJE_DIVISION, division5)
 division6 = numeroB / numeroA
-if (opciones == 6) : print (MENSAJE_DIVISION, division6)
+resultado = ""
+if (opciones == 1) : 
+    resultado = MENSAJE_SUMA, suma
+elif (opciones == 2) : 
+    resultado = MENSAJE_RESTA, resta2
+elif (opciones == 3) : 
+    resultado = MENSAJE_RESTA, resta3
+elif (opciones == 4) :
+    resultado = MENSAJE_MULTIPLICACION, multiplicacion
+elif (opciones == 5) :
+    resultado = MENSAJE_DIVISION, division5
+elif (opciones == 6) :
+    resultado = MENSAJE_DIVISION, division6
+print (resultado)
 print (MENSAJE_PREGUNTAS)
 decision = int (input(decisionContinuacion))
-print (decision)
 isMayorQue = numeroA > numeroB
 isDiferente = numeroA != numeroB
-if (decision == 1) : print ("#"*15, "Primera pregunta", "#"*15)
-if (decision == 1) : print (PREGUNTA_MAYOR, isMayorQue)
-if (decision == 1) : print ("#"*15, "Segunda pregunta", "#"*15)
-if (decision == 1) : print (PREGUNTA_DIFERENTES, isDiferente)
-if (decision == 1) : print ("#"*15, " Finalizado", "#"*15)
-if (decision == 1) : print (MENSAJE_DESPEDIDA)
-if (decision == 2) : print (MENSAJE_DESPEDIDA)
+if (decision == 1) :
+    print ("#"*15, "Primera pregunta", "#"*15)
+    print (PREGUNTA_MAYOR, isMayorQue) 
+    print ("#"*15, "Segunda pregunta", "#"*15) 
+    print (PREGUNTA_DIFERENTES, isDiferente)
+    print ("#"*15, " Finalizado", "#"*15) 
+    print (MENSAJE_DESPEDIDA)
+elif (decision == 2):
+    print (MENSAJE_DESPEDIDA)
+
