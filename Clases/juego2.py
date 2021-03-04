@@ -2,6 +2,7 @@
 import random
 # Entradas
 MENSAJE_SALUDO = 'Bienvenido a este programa, juguemos'
+MENSAJE_SEGUNDO_NIVEL = 'Felicidades, pasaste el primer nivel, ahora vas por el segundo'
 PREGUNTAR_NUMERO = '''
         En este juego debes asertar un numero
         que va desde el 1-10, la ideas es que
@@ -22,6 +23,7 @@ MENSAJE_PERDISTE = 'Perdiste, vuelve a intentarlo'
 
 # Codigo 
 numeroOculto = random.randint(1,10)
+numeroOcultoDos = random.randint(1,10)
 vidas = None
 
 dificultad = int (input (PREGUNTA_DIFICULTAD))
@@ -31,21 +33,38 @@ while (dificultad != 1 and dificultad != 2 and dificultad != 3 ):
 
 if (dificultad == 1):
     print ('Modo facil activado')
-    vidas = 5
+    vidas = 10
 elif (dificultad == 2):
     print ('Modo moderado activado')
-    vidas = 3
+    vidas = 5
 else :
     print ('Modo dificil activado')
-    vidas = 1
+    vidas = 2
 
 numeroIngresado = int (input(PREGUNTAR_NUMERO))
 while (numeroIngresado != numeroOculto and vidas > 1 ):
+    if(numeroIngresado > numeroOculto):
+        print ('estas caliente ')
+    else :
+        print ('estas frio')
     vidas -= 1
     print (f'te quedan {vidas} vidas')
     numeroIngresado = int (input(PREGUNTA_FALLASTE))
 
-if (vidas >= 0 and numeroIngresado == numeroOculto):
+if (vidas >=0 and numeroIngresado == numeroOculto):
+    print (MENSAJE_SEGUNDO_NIVEL)
+    numeroIngresado = int (input(PREGUNTAR_NUMERO))
+    while (numeroIngresado != numeroOcultoDos and vidas > 1 ):
+        if (numeroIngresado > numeroOcultoDos):
+            print ('estas caliente')
+        else:
+            print ('estas frio')
+        vidas -= 1
+        print (f'te quedan {vidas} vidas')
+        numeroIngresado = int (input(PREGUNTA_FALLASTE))
+
+if (vidas >= 0 and numeroIngresado == numeroOcultoDos):
     print (MENSAJE_GANASTE)
 else:
-    print (MENSAJE_PERDISTE, 'el numero era el...', numeroOculto)
+    print (MENSAJE_PERDISTE, 'el numero uno era el...', numeroOculto, 'el numero dos era el...', numeroOcultoDos)
+
