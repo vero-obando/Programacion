@@ -44,7 +44,7 @@ for ingreso in listaDolares :
     listaClasificacion.append (clasificacion)
 
 opcionElegida = int (input(pregunta_numero))
-while (opcionElegida != 5):
+while (opcionElegida != 4):
     if (opcionElegida == 1):
         opcionMoneda = input (pregunta_moneda)
         if (opcionMoneda == 'C'):
@@ -65,8 +65,6 @@ while (opcionElegida != 5):
         print (mensajeMayor, max(listaDolares))
         print (mensajeMenor, min(listaDolares))
         print (mensajePromedio, sum(listaDolares)/len(listaDolares))
-    elif (opcionElegida == 4):
-        print (mensaje_salida)
     else :
         print (mensaje_error)
     opcionElegida = int (input(pregunta_numero))
