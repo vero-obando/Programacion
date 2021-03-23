@@ -51,8 +51,19 @@ print (multiplicar (83,87))
 print (dividir (83,87))
 
 # Exponentes
-def potencia (a = 0 ,b = 1):
-    exponente = a ** b
-    return exponente
+def potenciar (a = 0 ,b = 1):
+    potencia = a ** b
+    return potencia
 
-print (potencia (2,3))
+print (potenciar (2,3))
+
+# Ingresar numero
+baseIngresada = int (input('Ingrese una base entera : '))
+exponenteIngresado = int (input('ingrese un exponente entero : '))
+print (potenciar(baseIngresada, exponenteIngresado))
+
+# Funciones dependientes de otras
+def calcular (operacion, numeroA, numeroB):
+    print (operacion(numeroA, numeroB))
+
+calcular (multiplicar, 63, 67)
