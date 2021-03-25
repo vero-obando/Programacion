@@ -1,3 +1,6 @@
+def linedesing(cantidad = 15, simbolo = '#'):
+    print (simbolo*cantidad)
+    return None
 # Sumar dos numero
 def sumar (a = 0 ,b = 0):
     '''
@@ -45,3 +48,11 @@ def calcular (operacion, numeroA, numeroB):
     respecto a la operacion que se de
     '''
     print (operacion(numeroA, numeroB))
+
+def mostrarLista (lista):
+    for elemento in lista:
+        print (elemento)
+
+def mostrar2lista (lista1, lista2):
+    for i in range (len(lista1)):
+        print (lista1[i], '\t', lista2[i])
