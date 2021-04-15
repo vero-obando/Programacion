@@ -16,7 +16,7 @@ class Perro ():
     
     def mostrarAtributos (self):
         print(f'''Mi nombre es {self.nombre}
-        Soy de raza {self.raza}
+        Soy un {self.raza}
         Tengo {self.meses} meses
         ''')
     
