@@ -18,6 +18,10 @@ class Torta ():
 # Punto 2
 class Estudiante ():
     def __init__ (self, edadEntrada, nombreEntrada, idEntrada, carreraEntrada, semestreEntrada):
+        '''
+        La clase estudiante tiene atributos de edad, nombre, ID, carreray semestre.
+        Tiene la funcion de ver la cantidad de tiempo de una materia.
+        '''
         self.edad = edadEntrada
         self.nombre = nombreEntrada
         self.id = idEntrada
@@ -30,6 +34,10 @@ class Estudiante ():
 # Punto 3
 class Nutricionista ():
     def __init__ (self, edadUsuario, nombreUsuario, universidadUsuario):
+        '''
+        La clase nutricionista tiene atributos de edad, nombre y universidad.
+        Tiene la accion de calcular el IMC.
+        '''
         self.edad = edadUsuario
         self.nombre = nombreUsuario
         self.universidad = universidadUsuario
@@ -41,10 +49,29 @@ class Nutricionista ():
 # Punto 4
 class Canguro ():
     def __init__ (self, edadCanguro, nombreCanguro, idCanguro):
+        '''
+        La clase canguro tiene atributos de edad, nombre y ID.
+        Tiene la accion de ver la cantidad de saltos dados.
+        '''
         self.edad = edadCanguro
         self.nombre = nombreCanguro
         self.id = idCanguro
-
-
+    
+    def saltos (self, cantidadSaltos):
+        for i in range (cantidadSaltos):
+            print (f'Soy {self.nombre} el canguro y he dado {i+1} saltos')
 
 # Punto 5 
+class Guitarra ():
+    def __init__ (self, colorEntrada, tipoEntrada, marcaEntrada):
+        '''
+        La clase guitarra tiene atributos de color, tipo y marca.
+        Tiene la accion de interpretar una cancion.
+        '''
+        self.tipo = tipoEntrada
+        self.color = colorEntrada
+        self.marca = marcaEntrada
+    
+    def interpretacion (self, cancion):
+        print (f'En la guitarra {self.tipo}, se va a interpretar la cancion {cancion}')
+
