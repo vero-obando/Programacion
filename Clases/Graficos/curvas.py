@@ -17,5 +17,5 @@ diccionario['EdadEstudiantes'] = [18,20,19,15]
 diccionario['Peso'] = [60,55,70,78]
 print(diccionario)
 
-print(diccionario['NombresEstudiantes'][-1][-1],diccionario['EdadEstudiantes'][-1],diccionario['Peso'][-1])
+print(diccionario['NombresEstudiantes'][-1],diccionario['EdadEstudiantes'][-1],diccionario['Peso'][-1])
 
