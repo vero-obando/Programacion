@@ -1,0 +1,15 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+print ('Photoplethysmography (PPG) es una técnica óptica simple usada para descubrir cambios volumétricos en sangre en la circulación periférica.')
+ppgData = pd.read_csv('ppg.csv',encoding='UTF-8',header=0,delimiter=';').to_dict()
+print(ppgData.keys())
+muestras = list(ppgData['muestra'].values())
+print(muestras)
+voltaje = list(ppgData['valor'].values())
+print(voltaje[-10:])
+plt.plot(muestras, voltaje)
+plt.title('Fotopletismografia')
+plt.xlabel('Tiempo (s)')
+plt.ylabel('Voltaje (mV)')
+plt.savefig('ppg.png')
+plt.show()
